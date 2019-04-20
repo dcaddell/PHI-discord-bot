@@ -1,4 +1,15 @@
 module.exports = (client, message) => {
+  if (message.content.match(/^!poll /)) {
+    params = message.content.split('poll ')
+
+    message.channel.send(`Should we ${params[1]}?`)
+      .then( response => {
+        response.react('👍')
+        response.react('👎')
+      })
+      .catch(() => console.error('One of the emojis failed to react.'))
+  }
+
   switch(message.content) {
     case 'ping':
       message.reply('Pong!')
