@@ -1,5 +1,5 @@
 module.exports = (client, message) => {
-  if (message.content.match(/^!poll /)) {
+  if (message.content.match(/^\/poll /)) {
     params = message.content.split('poll ')
 
     message.channel.send(`Should we ${params[1]}?`)
@@ -14,14 +14,17 @@ module.exports = (client, message) => {
     case 'ping':
       message.reply('Pong!')
       break;
-    case '!tableflip':
+    case '/tableflip':
       message.channel.send('(╯°□°)╯︵ ┻━┻')
       break;
-    case '!shrug':
+    case '/shrug':
       message.channel.send('¯\\_(ツ)_/¯')
       break;
-    case '!disappointed':
+    case '/disappointed':
       message.channel.send('smh')
+      break;
+    case '/success':
+      message.channel.send("Noice", {files: ["./assets/256px-SuccessKid.jpg"]})
       break;
     // Leaving no default case for now. Probably nothing I want to happen on _every_ message sent
   }
