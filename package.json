@@ -12,5 +12,17 @@
   },
   "devDependencies": {
     "nodemon": "^1.18.9"
-  }
+  },
+  "description": "PHI Discord Bot ===============",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcaddell/PHI-discord-bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dcaddell/PHI-discord-bot/issues"
+  },
+  "homepage": "https://github.com/dcaddell/PHI-discord-bot#readme"
 }
