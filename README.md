@@ -10,7 +10,7 @@ I'm sure some of this made it's way up into github. I'll work through setup with
 
 At the very least you'll need to create a file called `.env` in your project's root directory with the following contents:
 
-	`BOT_TOKEN=<secret_token_here>`
+	BOT_TOKEN=<secret_token_here>
 
 I'll send you the token info upon request.
 
