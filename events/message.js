@@ -1,7 +1,14 @@
 module.exports = (client, message) => {
   switch(message.content.toLowerCase()) {
     case '/help': // TODO: Pull this out into an array somewhere
-      message.reply('Accepted commands are /tableflip, /shrug, /disappointed, /success, /poll <yes/no question>')
+      message.reply('Accepted commands are ' +
+        '/tableflip, /shrug, /disappointed, /success, ' + 
+        '/pitchfork, (/praise or /praisethesun), (/upvote or /approve) ' +
+        '(/downvote or /disapprove), /fuckit, ' +
+        '/poll <yes/no question>.\n\n ' +
+        'You can also summon people by typing varieties of their name.\n\n ' +
+        'Hope you can find some easter eggs!'
+        )
       break;
     case 'ping':
       message.reply('Pong!')
@@ -22,10 +29,10 @@ module.exports = (client, message) => {
       message.channel.send('---E')
       break;
     case '/praise':
-      message.channel.send('\\[T]/')
+      message.channel.send({files: ["./assets/praise-basic.gif"]})
       break;
     case '/praisethesun':
-      message.channel.send('\\[T]/ PRAISE THE SUN \\[T]/')
+      message.channel.send({files: ["./assets/praise-the-sun.gif"]})
       break;
     case '/upvote':
     case '/approve':
@@ -46,24 +53,25 @@ module.exports = (client, message) => {
     case 'drew':
     case 'dewsef':
     case 'drewsef':
-      message.channel.send('@Drew we need you!')
+      message.channel.send('<@167476695559962624> we need you!')
       break;
     case 'haotian':
     case 'ht':
     case 'haoboy':
-      message.channel.send('@hwhwa#7123 we need you!')
+      message.channel.send('<@548360682094067712> we need you!')
       break;
     case 'george':
     case 'shu':
-      message.channel.send('@George#4720 we need you!')
+      message.channel.send('<@323660101476941824> we need you!')
       break;
     case 'greg':
     case 'greggers':
-      message.channel.send('@greggers#9291 we need you!')
+      message.channel.send('<@173669774293860352> we need you!')
       break;
     case 'bhargav':
     case 'bman':
-      message.channel.send('@fortunesfavored#3293 we need you!')
+    case 'b':
+      message.channel.send('<@565637261291683870> we need you!')
       break;
 
     // Leaving no default case for now. Probably nothing I want to happen on _every_ message sent
